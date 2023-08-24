@@ -109,8 +109,3 @@ main {
   max-width: 30rem;
   margin: 0 auto;
 }
-.thermostato {
-  background-color: antiquewhite;
-  border-radius: 20px;
-  box-shadow: 0 5px 0 4px #999;
-}
