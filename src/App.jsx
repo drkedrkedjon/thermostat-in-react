@@ -1,8 +1,10 @@
+import Thermostato from "./Thermostato";
+
 function App() {
   return (
-    <>
-      <p>Sasa</p>
-    </>
+    <main>
+      <Thermostato />
+    </main>
   );
 }
 
