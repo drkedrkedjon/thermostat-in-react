@@ -1,5 +1,39 @@
 .thermostato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
   background-color: antiquewhite;
   border-radius: 20px;
   box-shadow: 0 5px 0 4px #999;
+  padding: 2rem 5rem;
+}
+.h1 {
+  font-size: 2rem;
+}
+.display {
+  background-color: black;
+  border-radius: 16px;
+  align-self: stretch;
+  font-size: 6rem;
+  font-weight: 900;
+  color: greenyellow;
+  text-align: center;
+  padding: 0.5rem;
+}
+.buttons_group {
+  display: flex;
+  justify-content: space-between;
+  align-self: stretch;
+}
+.chevrons_group {
+  display: flex;
+  gap: 1rem;
+}
+.chevron_btn {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 0 -1px #999;
+  background-color: #ffffff;
 }

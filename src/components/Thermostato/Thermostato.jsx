@@ -5,18 +5,18 @@ export default function Thermostato() {
   return (
     <>
       <div className={styles.thermostato}>
-        <h1>ThermoKing</h1>
-        <div className="thermostato__display">25</div>
-        <div>
+        <h1 className={styles.h1}>ThermoKing</h1>
+        <div className={styles.display}>25</div>
+        <div className={styles.buttons_group}>
           <div>
             <label htmlFor="">MODE</label>
             <input type="checkmark" />
           </div>
-          <div>
-            <button>
+          <div className={styles.chevrons_group}>
+            <button className={styles.chevron_btn}>
               <ChevronDown />
             </button>
-            <button>
+            <button className={styles.chevron_btn}>
               <ChevronUp />
             </button>
           </div>
