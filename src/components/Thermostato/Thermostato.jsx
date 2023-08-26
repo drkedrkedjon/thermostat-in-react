@@ -14,10 +14,10 @@ export default function Thermostato() {
           </div>
           <div className={styles.chevrons_group}>
             <button className={styles.chevron_btn}>
-              <ChevronDown />
+              <ChevronDown size={35} />
             </button>
             <button className={styles.chevron_btn}>
-              <ChevronUp />
+              <ChevronUp size={35} />
             </button>
           </div>
         </div>
