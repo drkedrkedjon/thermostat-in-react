@@ -1,8 +1,10 @@
 import { ChevronDown, ChevronUp } from "react-feather";
 import styles from "./Thermostato.module.css";
 import ToggleButton from "../ToggleButton/ToggleButton";
+import { useState } from "react";
 
 export default function Thermostato() {
+  const [mode, setMode] = useState("celsius");
   return (
     <>
       <div className={styles.thermostato}>
@@ -15,6 +17,7 @@ export default function Thermostato() {
               { label: "C", value: "celsius" },
               { label: "F", value: "fahrenheit" },
             ]}
+            selectedValue={mode}
           />
           <div className={styles.chevrons_group}>
             <button className={styles.chevron_btn}>
