@@ -2,7 +2,12 @@
 import { useId } from "react";
 import styles from "./ToggleButton.module.css";
 
-export default function ToggleButton({ label, options, selectedValue }) {
+export default function ToggleButton({
+  label,
+  options,
+  selectedValue,
+  onChange,
+}) {
   const id = useId();
 
   return (
@@ -14,12 +19,19 @@ export default function ToggleButton({ label, options, selectedValue }) {
           const isSelected = selectedValue === value;
 
           return (
-            <label key={optionId} htmlFor={optionId}>
+            <label
+              className={`${styles.options} ${
+                isSelected ? styles.selectedOptions : ""
+              }`}
+              key={optionId}
+              htmlFor={optionId}
+            >
               <input
                 type="radio"
                 name={id}
                 value={value}
                 checked={isSelected}
+                onChange={onChange}
               ></input>
               {label}
             </label>

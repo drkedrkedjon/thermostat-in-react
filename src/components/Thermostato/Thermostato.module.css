@@ -28,17 +28,19 @@
 }
 .chevrons_group {
   display: flex;
+  align-items: end;
   gap: 0.5rem;
 }
 .chevron_btn {
   width: 3rem;
   height: 3rem;
   border-radius: 8px;
-  box-shadow: 0 4px 0 -1px #999;
+  box-shadow: 0 3px 0 -1px #999;
   background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .chevron_btn > svg {
   color: #999;

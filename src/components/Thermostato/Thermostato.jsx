@@ -5,6 +5,12 @@ import { useState } from "react";
 
 export default function Thermostato() {
   const [mode, setMode] = useState("celsius");
+
+  function toggleMode() {
+    const nextMode = mode === "celsius" ? "fahrenheit" : "celsius";
+    setMode(nextMode);
+  }
+
   return (
     <>
       <div className={styles.thermostato}>
@@ -18,6 +24,7 @@ export default function Thermostato() {
               { label: "F", value: "fahrenheit" },
             ]}
             selectedValue={mode}
+            onChange={toggleMode}
           />
           <div className={styles.chevrons_group}>
             <button className={styles.chevron_btn}>
