@@ -4,6 +4,7 @@ import ToggleButton from "../ToggleButton/ToggleButton";
 import { useState } from "react";
 
 export default function Thermostato() {
+  const [temp, setTemp] = useState(25);
   const [mode, setMode] = useState("celsius");
 
   function toggleMode() {
@@ -11,11 +12,18 @@ export default function Thermostato() {
     setMode(nextMode);
   }
 
+  function upTemp() {
+    setTemp(temp + 1);
+  }
+  function downTemp() {
+    setTemp(temp - 1);
+  }
+
   return (
     <>
       <div className={styles.thermostato}>
         <h1 className={styles.h1}>ThermoKing</h1>
-        <div className={styles.display}>25</div>
+        <div className={styles.display}>{temp}°</div>
         <div className={styles.buttons_group}>
           <ToggleButton
             label="Mode"
@@ -27,10 +35,10 @@ export default function Thermostato() {
             onChange={toggleMode}
           />
           <div className={styles.chevrons_group}>
-            <button className={styles.chevron_btn}>
+            <button onClick={downTemp} className={styles.chevron_btn}>
               <ChevronDown size={35} />
             </button>
-            <button className={styles.chevron_btn}>
+            <button onClick={upTemp} className={styles.chevron_btn}>
               <ChevronUp size={35} />
             </button>
           </div>
