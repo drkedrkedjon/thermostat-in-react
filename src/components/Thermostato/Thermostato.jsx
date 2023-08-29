@@ -10,6 +10,12 @@ export default function Thermostato() {
   function toggleMode() {
     const nextMode = mode === "celsius" ? "fahrenheit" : "celsius";
     setMode(nextMode);
+
+    const nextTemp =
+      mode === "celsius"
+        ? Math.round((temp * 9) / 5 + 32)
+        : Math.round(((temp - 32) * 5) / 9);
+    setTemp(nextTemp);
   }
 
   function upTemp() {
