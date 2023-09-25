@@ -21,6 +21,7 @@ export default function Thermostato() {
   function upTemp() {
     setTemp(temp + 1);
   }
+
   function downTemp() {
     setTemp(temp - 1);
   }
